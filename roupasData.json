@@ -1,0 +1,44 @@
+[
+  {
+    "nome": "SHORTIN CURTIN",
+    "descricao": "Novo short curto em lançamento .",
+    "foto": "/src/img/shortin.jpg",
+    "preco": 30.0
+  },
+  {
+    "nome": "SENTINELA",
+    "descricao": "Nova meia da Loud Sentinela",
+    "foto": "/src/img/sentinela.jpg",
+    "preco": 50.0
+  },
+  {
+    "nome": "CAPUDIN",
+    "descricao": "Bone capudin em lançamento, LIMITADO.",
+    "foto": "/src/img/bonecapudin.jpg",
+    "preco": 20.0
+  },
+  {
+    "nome": "BUGA PIXEL",
+    "descricao": "Camisa buga pixel!",
+    "foto": "/src/img/camisetaloud.jpg",
+    "preco": 40.0
+  },
+  {
+    "nome": "Novo uniforme da loud",
+    "descricao": "Oferta limitada do novo unifrome",
+    "foto": "/src/img/uniforme.jpg",
+    "preco": 100.0
+  },
+  {
+    "nome": "Loud X piet",
+    "descricao": "Camisa da loud com simbolo piet ",
+    "foto": "/src/img/loudpiet.jpg",
+    "preco": 45.0
+  },
+  {
+    "nome": "Camisetas Loud",
+    "descricao": "Camisas novas edição exclusiva e limitada",
+    "foto": "/src/img/CAMISETAS.jpg",
+    "preco": 100.0
+  }
+]
