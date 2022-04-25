@@ -15,16 +15,13 @@ const createroupasService = async (newroupas) => {
   return roupasCreate;
 };
 
-const updateroupasService = (id, roupaEdit) => {
-  roupaEdit['id'] = id;
-  const roupasIndex = roupas.findIndex((roupas) => roupas.id == id);
-  roupas[roupasIndex] = roupaEdit;
-  return roupaEdit;
+const updateroupasService = async (id, roupaEdit) => {
+  const roupasUpdate = await roupas.findByIdAndUpdate(id, roupaEdit);
+  return roupasUpdate;
 };
 
-const deleteroupasService = (id) => {
-  const roupasIndex = roupas.findIndex((roupas) => roupas.id == id);
-  return roupas.splice(roupasIndex, 1);
+const deleteroupasService = async (id) => {
+  return await roupas.findByIdAndDelete(id);
 };
 
 module.exports = {

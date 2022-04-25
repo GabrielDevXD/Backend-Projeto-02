@@ -42,17 +42,30 @@ const createroupasController = async (req, res) => {
   res.status(201).send(newroupas);
 };
 
-const updateroupasController = (req, res) => {
+const updateroupasController = async (req, res) => {
   const idParam = req.params.id;
   const roupaEdit = req.body;
-  const updateroupas = roupasService.updateroupasService(idParam, roupaEdit);
-  res.send(updateroupas);
+
+  const updatedroupas = await roupasService.updateroupasService(
+    idParam,
+    roupaEdit,
+  );
+
+  res.send(updatedroupas);
 };
 
-const deleteroupasController = (req, res) => {
+const deleteroupasController = async (req, res) => {
   const idParam = req.params.id;
-  roupasService.deleteroupasService(idParam);
-  res.send({ mensage: 'Roupa deletada com sucesso :)' });
+
+  const chosenroupas = await roupasService.FindByIdRoupasServices(idParam);
+
+  if (!chosenroupas) {
+    return res.status(404).send({ message: 'roupa não encontrada!' });
+  }
+
+  await roupasService.deleteroupasService(idParam);
+
+  res.send({ message: 'roupa deletada com sucesso!' });
 };
 
 module.exports = {
